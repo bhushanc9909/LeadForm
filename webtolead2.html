@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <title>Contact Us</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            background-image: url("photo1.jpeg");
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh; /*its viewport-width and viewpor-height covers full web page*/
+        }
+        form {
+            margin-top: 25px;
+            padding: 10px 40px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bolder;
+            font-size: larger;
+        }
+        input[type="text"],[type="Email"]{
+            width: 400px;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        input[type="Submit"]{
+            background-color: green;
+            color: white;
+            border: none;
+            margin-top: 5px;
+            font-weight: bolder;
+            padding: 10px 20px;
+            border-radius: 3px;
+        }
+        input[type="Reset"]{
+            background-color: red;
+            color: white;
+            border: none;
+            margin-top: 8px;
+            margin-left: 10px;
+            font-weight: bolder;
+            padding: 10px 20px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <div>
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <input type=hidden name="oid" value="00D5j00000CrWu8">
+            <input type=hidden name="retURL" value="http://amazon.in">
+            <h2 style="color:Blue;text-align:center;">Contact Us to Get Connected</h2><br/>
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name">
+            <span id="first_name_error" style="color: red;"></span>
+
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" maxlength="80" name="last_name">
+            <span id="last_name_error" style="color: red;"></span>
+
+
+            <label for="email">Email</label>
+            <input type="email" maxlength="80" id="email" name="email">
+
+            <label for="company">Company</label>
+            <input id="company" maxlength="40" name="company" type="text" size="20">
+            <span id="company_error" style="color: red;"></span>
+
+            <label for="city">City</label>
+            <input id="city" maxlength="40" name="city" type="text">
+            <span id="city_error" style="color: red;"></span>
+
+            <label for="state">Phone</label>
+            <input type="text" id="phone" name="phone" onkeydown="phone1(event)"><br/>
+            <span id="phone_error" style="color: red;"></span><br/><br/>
+            <label for="education"> Higher Education:</label>
+            <input  id="00N5j00000PDwQS" maxlength="50" name="00N5j00000PDwQS" size="20" type="text" required/><br>
+            <input type="Submit" name="submit" value="Submit">
+            <input type="Reset" id="reset" value="Reset">
+        </form>
+    </div>
+</center>
+</body>
+</html>
